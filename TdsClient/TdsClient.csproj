@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <PackageId>TdsClient.Nordseth</PackageId>
+    <PackageVersion>0.1.0</PackageVersion>
+    <Authors>Andreas Nordseth</Authors>
+    <Description>.Net Core database client for Sybase/SAP ASE with Tds protocol</Description>
+    <Version>0.1.0</Version>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <FileVersion>0.1.0.0</FileVersion>
+    <PackageProjectUrl>https://github.com/nordseth/TdsClient</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/nordseth/TdsClient</RepositoryUrl>
+    <PackageTags>Sybase tds</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="System.Data.Common" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>
