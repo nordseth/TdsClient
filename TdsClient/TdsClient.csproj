@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <PackageId>TdsClient.Nordseth</PackageId>
+    <PackageId>TdsClient</PackageId>
     <PackageVersion>0.1.0</PackageVersion>
     <Authors>Andreas Nordseth</Authors>
     <Description>.Net Core database client for Sybase/SAP ASE with Tds protocol</Description>
@@ -11,7 +11,9 @@
     <FileVersion>0.1.0.0</FileVersion>
     <PackageProjectUrl>https://github.com/nordseth/TdsClient</PackageProjectUrl>
     <RepositoryUrl>https://github.com/nordseth/TdsClient</RepositoryUrl>
-    <PackageTags>Sybase tds</PackageTags>
+    <PackageTags>Sybase TDS</PackageTags>
+    <Company />
+    <Copyright />
   </PropertyGroup>
 
   <ItemGroup>
