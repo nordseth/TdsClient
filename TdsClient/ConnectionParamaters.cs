@@ -12,7 +12,7 @@ namespace TdsClient
             ParameterDescriptors = new List<ParameterDescriptor>
             {
                 new ParameterDescriptor((p, v) => p.ServerAddress = v, new[] { "Server", "Address", "Data Source","ServerHostname", "Hostname" }, null, null),
-                new ParameterDescriptor((p, v) => p.ServerPort = int.Parse(v), new[] { "Port" }, p => p.ServerPort == 0, p => p.ServerPort = 6060),
+                new ParameterDescriptor((p, v) => p.ServerPort = int.Parse(v), new[] { "Port" }, p => p.ServerPort == 0, p => p.ServerPort = 5000),
                 new ParameterDescriptor((p, v) => p.ClientHostname = v, new[] { "ClientHostname"  }, p => p.ClientHostname == null, p => p.ClientHostname = Environment.MachineName),
                 new ParameterDescriptor((p, v) => p.Username = v, new[] { "Username", "usr", "uid", "user" }, null, null),
                 new ParameterDescriptor((p, v) => p.Password = v, new[] { "Password", "pwd", "pass" }, null, null),
@@ -76,7 +76,7 @@ namespace TdsClient
                     var key = p.First().Trim();
                     if (!string.IsNullOrEmpty(key))
                     {
-                        var value = p.Select(v => v.TrimStart()).Skip(1).FirstOrDefault();
+                        var value = p.Skip(1).Select(v => v.TrimStart()).FirstOrDefault();
                         result[key] = value;
                     }
                 }
