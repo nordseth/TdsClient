@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Newtonsoft.Json;
 using TdsClient.Protocol;
 
 namespace TdsClient.Tokens
@@ -28,14 +27,13 @@ namespace TdsClient.Tokens
 
         public string GetMessage()
         {
-            var msg = JsonConvert.SerializeObject(Message);
             if (!string.IsNullOrEmpty(ProcName))
             {
-                return $"{MessageNumber}/{State}: {msg} on {ServerName} in {ProcName}:{LineNumber}";
+                return $"{MessageNumber}/{State}: \"{Message}\" on {ServerName} in {ProcName}:{LineNumber}";
             }
             else
             {
-                return $"{MessageNumber}/{State}: {msg} on {ServerName}";
+                return $"{MessageNumber}/{State}: \"{Message}\" on {ServerName}";
             }
         }
 

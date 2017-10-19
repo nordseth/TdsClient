@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
-using Newtonsoft.Json;
 using TdsClient.Protocol;
 
 namespace TdsClient.Tokens
@@ -16,8 +16,8 @@ namespace TdsClient.Tokens
 
         public override string ToString()
         {
-            var jsonData = JsonConvert.SerializeObject(Data);
-            return $"{TokenType} : {jsonData}";
+            string dataArrayString = string.Join(", ", Data.Select(d => $"\"{d}\"").ToArray());
+            return $"{TokenType} : [ {dataArrayString} ]";
         }
 
         public override string ToShortString()
